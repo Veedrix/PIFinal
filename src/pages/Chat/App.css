@@ -1,0 +1,204 @@
+/**============= Variables ================**/
+:root {
+  --header-height: 4.5rem;
+
+  /* Colors */
+  --hue: 288;
+  /* HSL color modes */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 49%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+
+  /* Fonts Sizes */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1.125rem;
+
+  --title-font: "Poppins", sans-serif;
+  --body-font: "DM Sans", sans-serif;
+}
+body {
+  font: 500 1rem var(--title-font);
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+/**============= Chat ================**/
+.Chat {
+  text-align: center;
+  max-width: 100vh;
+  max-height: 90vh;
+  margin: 0 auto;
+}
+
+.Chat header {
+  height: 10vh;
+  min-height: 50px;
+  color: var(--title-color);
+  position: fixed;
+  width: 100%;
+  max-width: 100vh;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+}
+.Chat span{
+  color: var(--base-color);
+}
+
+.Chat section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+  max-height: 98vh;
+  background-color: var(--body-color);
+}
+
+.mainChat {
+  padding: 0.5rem;
+  height: 80vh;
+  margin: 10vh 0 10vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainChat::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.mainChat::-webkit-scrollbar-track {
+  background: hsla(var(--hue), 90%, 60%, 0.5);
+}
+
+.mainChat::-webkit-scrollbar-thumb {
+  background: hsla(var(--hue), 90%, 30%, 1);
+}
+
+form {
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--base-color);
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+form button {
+  width: 30%;
+  background-color: var(--base-color);
+  border-radius: 0.25rem;
+}
+
+input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1.5rem;
+  background: var(--base-color);
+  color: white;
+  margin-left: 5vh;
+  padding: 0;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+
+.buttonChat {
+  background-color: var(--base-color);
+  border: none;
+  color: white;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: hsla(var(--hue), 31%, 20%, 0.4) 1px 1px 1px,
+    hsla(var(--hue), 31%, 20%, 0.3) 1px 1px 1px 1px,
+    hsla(var(--hue), 31%, 33%, 0.5) -1px -1px 1px inset;
+}
+
+.buttonChat:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sign-in {
+  color: hsla(var(--hue), 90%, 15%, 1);
+  background: hsla(var(--hue), 90%, 50%, 0.5);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.messages {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p {
+  color: hsla(var(--hue), 90%, 10%, 1);
+  background: hsla(var(--hue), 90%, 60%, 0.7);
+  align-self: flex-end;
+}
+.received p {
+  color: hsla(var(--hue), 90%, 15%, 1);
+  background: hsla(var(--hue), 60%, 30%, 0.5);
+}
+
+.photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}
+/* ========= MEDIA QUERIES ========= */
+/* large devices: 1023 >*/
+/* large devices: 992 > */
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
+@media (max-width: 600px) {
+  .Chat header {
+    height: 10vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    font-size: 0.6rem;
+  }
+
+  .buttonChat {
+    padding: 0.65rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+  }
+}
