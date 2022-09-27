@@ -45,7 +45,7 @@ export const MainPage = () => {
                   breve beta!
                 </p>
                 <a className="button" href="#">
-                  Inscreva-se
+                  Login
                 </a>
               </div>
             </div>

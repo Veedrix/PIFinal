@@ -6,7 +6,7 @@ import { memo, useEffect, useRef } from "react";
 import "./Game.css";
 
 const Board = () => {
-  const [display, score, onKeyDown] = useBoard();
+  const [display, score, onKeyDown, onButtonPress] = useBoard();
   const eBoard = useRef();
 
   useEffect(focusBoard, []);
@@ -31,6 +31,7 @@ const Board = () => {
           <Row row={row} key={index} />
         ))}
       </div>
+
     </div>
   );
 };

@@ -5,7 +5,6 @@ import { getAuth } from "firebase/auth";
 import {
   addDoc,
   collection,
-  limit,
   orderBy,
   query,
   serverTimestamp,

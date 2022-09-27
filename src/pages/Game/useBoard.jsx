@@ -160,6 +160,29 @@ export function useBoard() {
     }
   }
 
+  function onButtonPress(event) {
+    switch (event.key) {
+      case "ArrowRight":
+        movePosition(1, 0);
+        event.preventDefault();
+        break;
+      case "ArrowLeft":
+        movePosition(-1, 0);
+        event.preventDefault();
+        break;
+      case "ArrowDown":
+        movePosition(0, 1);
+        event.preventDefault();
+        break;
+      case "ArrowUp":
+        rotateShape();
+        event.preventDefault();
+        break;
+      default:
+        break;
+    }
+  }
+
   function movePosition(x, y) {
     const res = { x: x + position.x, y: y + position.y };
 
@@ -193,5 +216,5 @@ export function useBoard() {
     });
   }
 
-  return [display, score, onKeyDown];
+  return [display, score, onKeyDown, onButtonPress];
 }
