@@ -45,6 +45,9 @@ export const MainPage = () => {
                   porem não somente isso você tambem poderá acessar o chat e conversar com outros
                   jogadores e os desenvolvedores.
                 </p>
+                <h3>
+                  Para que você acesse nossas funcionalidades tem que logar no site, na parte superior direita!
+                </h3>
               </div>
             </div>
           </section>
