@@ -40,13 +40,11 @@ export const MainPage = () => {
               <div className="text">
                 <h2 className="title">Omni um aplicativo inovador.</h2>
                 <p>
-                  Este é o local onde você poderá se inscrever para receber o
-                  jogo completo no futuro e poderá neste mesmo site jogar um
-                  breve beta!
+                  Este é o site onde você pode jogar o jogo que nossa empresa desenvolveu e 
+                  tambem seus dados ficaram guardados para que no futuro você receba o jogo completo,
+                  porem não somente isso você tambem poderá acessar o chat e conversar com outros
+                  jogadores e os desenvolvedores.
                 </p>
-                <a className="button" href="#">
-                  Login
-                </a>
               </div>
             </div>
           </section>
@@ -313,6 +311,9 @@ export const MainPage = () => {
                     5702074000@unicentro.edu.br
                   </li>
                 </ul>
+                <a className="button" href="#">
+                  Avalie o nosso Site!
+                </a>
               </div>
             </div>
           </section>
