@@ -46,7 +46,7 @@ export const MainPage = () => {
                   jogadores e os desenvolvedores.
                 </p>
                 <h3>
-                  Para que você acesse nossas funcionalidades tem que logar no site, na parte superior direita!
+                  Logue no site para ter acesso a nosso chat e jogo!
                 </h3>
               </div>
             </div>
