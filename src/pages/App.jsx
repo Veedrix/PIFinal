@@ -38,6 +38,7 @@ export const App = () => {
 
   const LinkPagina = (page) => {
     setPagina(page);
+    setShow("");
   };
   const retornarPagina = () => {
     switch (pagina) {
@@ -96,38 +97,54 @@ export const App = () => {
     return (
       <>
         <header id="header" className="scroll">
-          <nav className="container">
+          <nav className={`container ${show}`}>
             <a className="logo" href="#home">
               Omni<span>Development.</span>{" "}
             </a>
             <div className="menu">
               <ul className="grid">
                 <li>
-                  <a className="title" href="#home">
+                  <a className="title" href="#home" onClick={() => setShow("")}>
                     <FiHome />
                     Inicio
                   </a>
                 </li>
                 <li>
-                  <a className="title" href="#about">
+                  <a
+                    className="title"
+                    href="#about"
+                    onClick={() => setShow("")}
+                  >
                     <FiInfo />
                     Sobre
                   </a>
                 </li>
                 <li>
-                  <a className="title" href="#services">
+                  <a
+                    className="title"
+                    href="#services"
+                    onClick={() => setShow("")}
+                  >
                     <BiRocket />
                     Aplicativo
                   </a>
                 </li>
                 <li>
-                  <a className="title" href="#testimonial">
+                  <a
+                    className="title"
+                    href="#testimonial"
+                    onClick={() => setShow("")}
+                  >
                     <FiUsers />
                     Depoimentos
                   </a>
                 </li>
                 <li>
-                  <a className="title" href="#contact">
+                  <a
+                    className="title"
+                    href="#contact"
+                    onClick={() => setShow("")}
+                  >
                     <FiPhoneCall />
                     Contato
                   </a>
@@ -144,11 +161,11 @@ export const App = () => {
                 </li>
               </ul>
             </div>
-            <div className="toggle icon-menu">
+            <div className="toggle icon-menu" onClick={() => setShow("show")}>
               {" "}
               <FiMenu />{" "}
             </div>
-            <div className="toggle icon-close">
+            <div className="toggle icon-close" onClick={() => setShow("")}>
               {" "}
               <FiX />{" "}
             </div>
@@ -168,31 +185,47 @@ export const App = () => {
             <div className="menu">
               <ul className="grid">
                 <li>
-                  <a className="title" href="#home">
+                  <a className="title" href="#home" onClick={() => setShow("")}>
                     <FiHome />
                     Inicio
                   </a>
                 </li>
                 <li>
-                  <a className="title" href="#about">
+                  <a
+                    className="title"
+                    href="#about"
+                    onClick={() => setShow("")}
+                  >
                     <FiInfo />
                     Sobre
                   </a>
                 </li>
                 <li>
-                  <a className="title" href="#services">
+                  <a
+                    className="title"
+                    href="#services"
+                    onClick={() => setShow("")}
+                  >
                     <BiRocket />
                     Aplicativo
                   </a>
                 </li>
                 <li>
-                  <a className="title" href="#testimonial">
+                  <a
+                    className="title"
+                    href="#testimonial"
+                    onClick={() => setShow("")}
+                  >
                     <FiUsers />
                     Depoimentos
                   </a>
                 </li>
                 <li>
-                  <a className="title" href="#contact">
+                  <a
+                    className="title"
+                    href="#contact"
+                    onClick={() => setShow("")}
+                  >
                     <FiPhoneCall />
                     Contato
                   </a>
@@ -246,7 +279,7 @@ export const App = () => {
     return (
       <>
         <header id="header" className="scroll">
-          <nav className="container">
+          <nav className={`container ${show}`}>
             <a className="logo" href="#home">
               Omni<span>Development.</span>{" "}
             </a>
@@ -258,19 +291,20 @@ export const App = () => {
                     className="title"
                     onClick={() => {
                       LinkPagina("");
+                      setShow("");
                     }}
                   >
-                    <BiLogOutCircle />
+                    <BiLogInCircle />
                     Sair
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="toggle icon-menu">
+            <div className="toggle icon-menu" onClick={() => setShow("show")}>
               {" "}
               <FiMenu />{" "}
             </div>
-            <div className="toggle icon-close">
+            <div className="toggle icon-close" onClick={() => setShow("")}>
               {" "}
               <FiX />{" "}
             </div>

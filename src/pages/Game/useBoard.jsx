@@ -116,7 +116,7 @@ export function useBoard() {
 
       touched = true;
       setScore((oldVal) => oldVal + 1000);
-      TIME -= 1.5;
+      TIME -= 3;
     };
 
     for (let y = 0; y < ROW_COUNT; y++) {
