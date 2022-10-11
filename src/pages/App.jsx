@@ -153,7 +153,10 @@ export const App = () => {
                   <a
                     type="button"
                     className="title"
-                    onClick={() => signInWithGoogle()}
+                    onClick={() => {
+                      signInWithGoogle();
+                      setShow("");
+                    }}
                   >
                     <BiLogInCircle />
                     Logar com Google
@@ -254,7 +257,10 @@ export const App = () => {
                   <a
                     type="button"
                     className="title"
-                    onClick={() => auth.signOut()}
+                    onClick={() => {
+                      auth.signOut();
+                      setShow("");
+                    }}
                   >
                     <BiLogInCircle />
                     Sair
