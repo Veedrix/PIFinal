@@ -314,9 +314,6 @@ export const MainPage = () => {
                     5702074000@unicentro.edu.br
                   </li>
                 </ul>
-                <a className="button" href="#">
-                  Avalie o nosso Site!
-                </a>
               </div>
             </div>
           </section>
